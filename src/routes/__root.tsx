@@ -1,7 +1,5 @@
 import type { QueryClient } from "@tanstack/react-query"
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
 import { HeadContent, Outlet, Scripts, createRootRouteWithContext } from "@tanstack/react-router"
-import { TanStackRouterDevtools } from "@tanstack/react-router-devtools"
 import type * as React from "react"
 import { Toaster } from "sonner"
 import { DefaultCatchBoundary } from "~/components/DefaultCatchBoundary"
@@ -28,11 +26,15 @@ export const Route = createRootRouteWithContext<{
                 content: "width=device-width, initial-scale=1"
             },
             ...seo({
-                title: "Instructa Start",
-                description: "Instructa App Starter"
+                title: "Poznań.VJU - Największe wydarzenie technologiczne w Poznaniu",
+                description: "Dołącz do Poznań.VJU - spotkaj się z ekspertami, wymień doświadczenia i rozwijaj swoje umiejętności"
             })
         ],
         links: [
+            {
+                rel: "stylesheet",
+                href: "https://use.typekit.net/xbb0nym.css"
+            },
             {
                 rel: "stylesheet",
                 href: appCss
@@ -77,12 +79,6 @@ function RootComponent() {
     return (
         <RootDocument>
             <Outlet />
-            {import.meta.env.DEV ? (
-                <>
-                    <ReactQueryDevtools buttonPosition="bottom-right" />
-                    <TanStackRouterDevtools />
-                </>
-            ) : null}
         </RootDocument>
     )
 }

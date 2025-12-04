@@ -1,6 +1,7 @@
 import { Outlet, createFileRoute } from '@tanstack/react-router';
 import { Suspense } from 'react';
-import { Header } from '~/components/Header';
+import { Navigation } from '~/components/Navigation';
+import { Footer } from '~/components/Footer';
 
 export const Route = createFileRoute('/(marketing)')({
   component: RouteComponent,
@@ -8,11 +9,15 @@ export const Route = createFileRoute('/(marketing)')({
 
 function RouteComponent() {
   return (
-    <div>
-      <Header />
-      <Suspense fallback={<div>Loading...</div>}>
-        <Outlet />
-      </Suspense>
+    <div className="flex min-h-screen flex-col">
+      <Navigation />
+      <main className="flex-1">
+        <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
+          <Outlet />
+        </Suspense>
+      </main>
+      <Footer />
     </div>
   );
 }
+
