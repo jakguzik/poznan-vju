@@ -47,7 +47,6 @@ const programData: ProgramDay[] = [
             type: 'panel',
             speakers: ['Karolina', 'Mikołaj', 'Kuba Guzik', 'Grzegorz Leszczyński', 'Clockwork', 'Michał Mierzwa', 'FTVision', 'Lola', 'Kuśwa VJs', 'Pixelo', 'Laserowy Maciej']
           },
-          { time: '19:50', duration: '10 min', title: 'Przerwa', type: 'break' },
           { 
             time: '20:00', 
             duration: '1h', 
@@ -69,11 +68,8 @@ const programData: ProgramDay[] = [
         address: 'Al. Marcinkowskiego 29, Poznań',
         events: [
           { time: '17:30', duration: '1h', title: 'Warsztaty Resolume', speakers: ['Kuba'], type: 'workshop' },
-          { time: '18:30', duration: '10 min', title: 'Przerwa', type: 'break' },
           { time: '18:40', duration: '40 min', title: 'Prezentacja', speakers: ['Grzegorz Leszczyński'], type: 'talk' },
-          { time: '19:20', duration: '10 min', title: 'Przerwa', type: 'break' },
           { time: '19:30', duration: '40 min', title: 'Prezentacja', speakers: ['Michał Mierzwa'], type: 'talk' },
-          { time: '20:10', duration: '10 min', title: 'Przerwa', type: 'break' },
           { time: '20:20', duration: '40 min', title: 'Prezentacja', speakers: ['Karolina'], type: 'talk' },
           { time: '21:00', title: 'Koniec', type: 'info' },
         ],
@@ -95,7 +91,6 @@ const programData: ProgramDay[] = [
             speakers: ['Mikołaj'], 
             type: 'talk' 
           },
-          { time: '14:50', duration: '10 min', title: 'Przerwa', type: 'break' },
           { 
             time: '15:00', 
             duration: '20 min', 
@@ -103,7 +98,6 @@ const programData: ProgramDay[] = [
             speakers: ['Kuba Grzeszczuk'], 
             type: 'talk' 
           },
-          { time: '15:20', duration: '10 min', title: 'Przerwa', type: 'break' },
           { 
             time: '15:30', 
             duration: '20 min', 
@@ -111,7 +105,6 @@ const programData: ProgramDay[] = [
             speakers: ['Tomek Grzeszczuk'], 
             type: 'talk' 
           },
-          { time: '15:50', duration: '10 min', title: 'Przerwa', type: 'break' },
           { 
             time: '16:00', 
             duration: '20 min', 
@@ -119,7 +112,6 @@ const programData: ProgramDay[] = [
             speakers: ['Tom Skof'], 
             type: 'talk' 
           },
-          { time: '16:20', duration: '10 min', title: 'Przerwa', type: 'break' },
           { 
             time: '16:30', 
             duration: '20 min', 
@@ -127,7 +119,6 @@ const programData: ProgramDay[] = [
             speakers: ['Ludwik AV'], 
             type: 'talk' 
           },
-          { time: '16:50', duration: '10 min', title: 'Przerwa', type: 'break' },
           { 
             time: '17:00', 
             duration: '30 min', 
@@ -136,7 +127,6 @@ const programData: ProgramDay[] = [
             speakers: ['Clockwork'], 
             type: 'talk' 
           },
-          { time: '17:30', duration: '10 min', title: 'Przerwa', type: 'break' },
           { 
             time: '17:40', 
             duration: '40 min', 
@@ -144,7 +134,6 @@ const programData: ProgramDay[] = [
             speakers: ['Adam Serek', 'FKS - EYE'], 
             type: 'talk' 
           },
-          { time: '18:20', duration: '10 min', title: 'Przerwa', type: 'break' },
           { 
             time: '18:30', 
             duration: '40 min', 
@@ -152,7 +141,6 @@ const programData: ProgramDay[] = [
             speakers: ['Emiko'], 
             type: 'talk' 
           },
-          { time: '19:10', duration: '10 min', title: 'Przerwa', type: 'break' },
           { 
             time: '19:20', 
             duration: '40 min', 
