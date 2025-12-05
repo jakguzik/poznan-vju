@@ -2,9 +2,6 @@ import { Link } from '@tanstack/react-router';
 import { Button } from '~/components/ui/button';
 
 export function HeroSection() {
-  // #region agent log
-  fetch('http://127.0.0.1:7242/ingest/aaaaec1c-2773-4fad-b6fe-fb7030c6fff7',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'HeroSection.tsx:4',message:'HeroSection render',data:{},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'C'})}).catch(()=>{});
-  // #endregion
   return (
     <section className="relative h-[calc(100vh-96px)] sm:h-[calc(100vh-112px)] overflow-hidden flex items-center justify-center">
       {/* Background pattern */}

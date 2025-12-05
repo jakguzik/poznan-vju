@@ -18,26 +18,14 @@ export function ThemeProvider({
 
   // 2 After mount, check localStorage and update if different
   useEffect(() => {
-    // #region agent log
-    fetch('http://127.0.0.1:7242/ingest/aaaaec1c-2773-4fad-b6fe-fb7030c6fff7',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'theme-provider.tsx:20',message:'ThemeProvider useEffect entry',data:{initial,lsKey:LS_KEY},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'A'})}).catch(()=>{});
-    // #endregion
     const ls = localStorage.getItem(LS_KEY) as Theme | null;
-    // #region agent log
-    fetch('http://127.0.0.1:7242/ingest/aaaaec1c-2773-4fad-b6fe-fb7030c6fff7',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'theme-provider.tsx:22',message:'ThemeProvider localStorage check',data:{ls,initial,willUpdate:ls && ls !== initial},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'A'})}).catch(()=>{});
-    // #endregion
     if (ls && ls !== initial) {
-      // #region agent log
-      fetch('http://127.0.0.1:7242/ingest/aaaaec1c-2773-4fad-b6fe-fb7030c6fff7',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'theme-provider.tsx:24',message:'ThemeProvider setThemeState called',data:{newTheme:ls,oldTheme:initial},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'A'})}).catch(()=>{});
-      // #endregion
       setThemeState(ls);
     }
   }, [initial]);
 
   // 3 keep DOM and LS up to date
   useLayoutEffect(() => {
-    // #region agent log
-    fetch('http://127.0.0.1:7242/ingest/aaaaec1c-2773-4fad-b6fe-fb7030c6fff7',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'theme-provider.tsx:28',message:'ThemeProvider useLayoutEffect entry',data:{theme},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'A'})}).catch(()=>{});
-    // #endregion
     const root = document.documentElement;
     root.classList.remove('light', 'dark');
 
@@ -50,9 +38,6 @@ export function ThemeProvider({
 
     root.classList.add(applied);
     localStorage.setItem(LS_KEY, theme);
-    // #region agent log
-    fetch('http://127.0.0.1:7242/ingest/aaaaec1c-2773-4fad-b6fe-fb7030c6fff7',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'theme-provider.tsx:40',message:'ThemeProvider useLayoutEffect exit',data:{theme,applied},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'A'})}).catch(()=>{});
-    // #endregion
   }, [theme]);
 
   // 3 listen to cross-tab changes
