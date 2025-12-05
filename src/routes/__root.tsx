@@ -26,8 +26,8 @@ export const Route = createRootRouteWithContext<{
                 content: "width=device-width, initial-scale=1"
             },
             ...seo({
-                title: "Poznań.VJU - Największe wydarzenie technologiczne w Poznaniu",
-                description: "Dołącz do Poznań.VJU - spotkaj się z ekspertami, wymień doświadczenia i rozwijaj swoje umiejętności"
+                title: "Poznań.VJU - AV Festiwal | Małe święto VJów w Poznaniu",
+                description: "Dołącz do Poznań.VJU - AV festiwalu i małego święta VJów w Poznaniu. Spotkaj się z artystami wizualnymi, wymień doświadczenia i odkryj świat visual jockeyingu"
             })
         ],
         links: [

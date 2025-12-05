@@ -23,10 +23,10 @@ export function CTASection({ className }: CTASectionProps) {
       <div className="relative container mx-auto px-4 py-12 md:py-16">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl animate-in fade-in duration-700">
-            Dołącz do wydarzenia
+            Dołącz do AV Festiwalu
           </h2>
           <p className="mt-4 text-lg text-muted-foreground animate-in fade-in duration-700 delay-150">
-            Nie przegap okazji do spotkania z ekspertami i wymiany doświadczeń
+            Nie przegap małego święta VJów w Poznaniu. Spotkaj się z artystami wizualnymi, wymień doświadczenia i odkryj świat visual jockeyingu
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in duration-700 delay-300">
             <Button 
