@@ -34,7 +34,7 @@ export function LogosSection({ className }: LogosSectionProps) {
             <h3 className="text-lg font-semibold mb-6 text-center">
               PATRONAT MEDIALNY
             </h3>
-            <div className="flex flex-wrap items-center justify-center gap-6">
+            <div className="flex flex-wrap items-center justify-center gap-10">
               {patronatLogos.length > 0 ? (
                 patronatLogos.map((logo, index) => (
                   <img 
@@ -55,7 +55,7 @@ export function LogosSection({ className }: LogosSectionProps) {
             <h3 className="text-lg font-semibold mb-6 text-center">
               ORGANIZATORZY
             </h3>
-            <div className="flex flex-wrap items-center justify-center gap-6">
+            <div className="flex flex-wrap items-center justify-center gap-10">
               {organizatorLogos.length > 0 ? (
                 organizatorLogos.map((logo, index) => (
                   <img 
