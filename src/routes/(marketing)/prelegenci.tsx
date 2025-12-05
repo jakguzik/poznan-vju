@@ -80,7 +80,7 @@ function PrelegenciPage() {
               {prelegenci.map((prelegent, index) => (
                 <div
                   key={prelegent.id}
-                  className="group rounded-lg border bg-card p-6 shadow-sm transition-all hover:shadow-md hover:scale-105 animate-in fade-in duration-700"
+                  className="group border bg-card p-6 shadow-sm transition-all hover:shadow-md hover:scale-105 animate-in fade-in duration-700"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="flex flex-col items-center text-center">
@@ -88,7 +88,7 @@ function PrelegenciPage() {
                       <img
                         src={prelegent.image}
                         alt={prelegent.name}
-                        className="w-24 h-24 rounded-full object-cover border-2 border-border transition-transform group-hover:scale-110"
+                        className="w-24 h-24 object-cover border-2 border-border transition-transform group-hover:scale-110"
                       />
                     </div>
                     <h3 className="text-xl font-semibold mb-1">{prelegent.name}</h3>

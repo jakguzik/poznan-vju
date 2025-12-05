@@ -6,9 +6,30 @@ import { Button } from '~/components/ui/button';
 export function Navigation() {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
+  const [isClosing, setIsClosing] = useState(false);
+
   const isActive = (path: string) => {
     return location.pathname === path;
+  };
+
+  const handleMenuToggle = () => {
+    if (mobileMenuOpen) {
+      setIsClosing(true);
+      setTimeout(() => {
+        setMobileMenuOpen(false);
+        setIsClosing(false);
+      }, 400);
+    } else {
+      setMobileMenuOpen(true);
+    }
+  };
+
+  const handleMenuClose = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setMobileMenuOpen(false);
+      setIsClosing(false);
+    }, 400);
   };
 
   const navLinks = [
@@ -18,7 +39,7 @@ export function Navigation() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 border-b bg-black">
       <nav className="flex items-center justify-between px-6 py-4 w-full">
         <Link 
           to="/" 
@@ -32,7 +53,7 @@ export function Navigation() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.to}
@@ -56,54 +77,53 @@ export function Navigation() {
               href="https://www.facebook.com/events" 
               target="_blank" 
               rel="noopener noreferrer"
+              className="gap-3"
             >
+              <img src="/fb-icon.svg" alt="" className="size-5 mb-1" aria-hidden="true" />
               Dołącz do wydarzenia
             </a>
           </Button>
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="flex md:hidden items-center gap-4">
+        <div className="flex lg:hidden items-center gap-4">
           <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 text-foreground hover:bg-accent rounded-md transition-colors"
+            onClick={handleMenuToggle}
+            className="p-2 text-foreground hover:bg-primary transition-all duration-300 ease-out relative w-10 h-10 flex items-center justify-center"
             aria-label="Toggle menu"
           >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              {mobileMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
+            <img
+              src="/menu-open.svg"
+              alt="Menu"
+              className={cn(
+                "absolute w-6 h-6 transition-all duration-300",
+                mobileMenuOpen ? "scale-0 rotate-90" : "scale-100 rotate-0"
               )}
-            </svg>
+            />
+            <img
+              src="/menu-close.svg"
+              alt="Close"
+              className={cn(
+                "absolute w-6 h-6 transition-all duration-300",
+                mobileMenuOpen ? "scale-100 rotate-0" : "scale-0 -rotate-90"
+              )}
+            />
           </button>
         </div>
       </nav>
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t bg-background animate-in fade-in duration-200">
+        <div className={cn(
+          "lg:hidden absolute top-full left-0 right-0 border-t bg-black z-50",
+          isClosing ? "slide-up" : "slide-down"
+        )}>
           <div className="px-6 py-4 flex flex-col gap-4">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={handleMenuClose}
                 className={cn(
                   "text-base font-medium py-2 transition-colors",
                   isActive(link.to) 
@@ -119,12 +139,14 @@ export function Navigation() {
               size="sm"
               className="mt-2"
             >
-              <a 
-                href="https://www.facebook.com/events" 
-                target="_blank" 
+              <a
+                href="https://www.facebook.com/events"
+                target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={handleMenuClose}
+                className="gap-3"
               >
+                <img src="/fb-icon.svg" alt="" className="size-5 mb-1" aria-hidden="true" />
                 Dołącz do wydarzenia
               </a>
             </Button>

@@ -13,28 +13,28 @@ interface Logo {
 
 // Logo patronów medialnych
 const patronatLogos: Logo[] = [
-  { src: '/afera-logo.svg', alt: 'Afera', height: 'h-16' },
+  { src: '/afera-logo.svg', alt: 'Afera', height: 'h-20 md:h-24' },
 ];
 
 // Logo organizatorów
 const organizatorLogos: Logo[] = [
-  { src: '/vju-logo.svg', alt: 'VJU', height: 'h-10' },
-  { src: '/damdam-logo.svg', alt: 'DamDam' },
-  { src: '/medialab-logo.svg', alt: 'Medialab', width: 'w-20' },
-  { src: '/pzn-logo.svg', alt: 'PZN', width: 'w-20' },
+  { src: '/vju-logo.svg', alt: 'VJU', height: 'h-8 md:h-10' },
+  { src: '/damdam-logo.svg', alt: 'DamDam', height: 'h-16 md:h-18' },
+  { src: '/medialab-logo.svg', alt: 'Medialab', height: 'h-6 md:h-7' },
+  { src: '/pzn-logo.svg', alt: 'PZN', height: 'h-14 md:h-16' },
 ];
 
 export function LogosSection({ className }: LogosSectionProps) {
   return (
     <section className={cn("py-12 md:py-16", className)}>
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row gap-12 md:gap-16">
+        <div className="flex flex-col md:flex-row gap-12 md:gap-24 justify-center items-center md:items-start">
           {/* PATRONAT MEDIALNY */}
-          <div className="w-full md:w-1/3">
-            <h3 className="text-lg font-semibold mb-6 text-center md:text-left">
+          <div>
+            <h3 className="text-lg font-semibold mb-6 text-center">
               PATRONAT MEDIALNY
             </h3>
-            <div className="flex flex-wrap items-center justify-center md:justify-start gap-6">
+            <div className="flex flex-wrap items-center justify-center gap-6">
               {patronatLogos.length > 0 ? (
                 patronatLogos.map((logo, index) => (
                   <img 
@@ -51,11 +51,11 @@ export function LogosSection({ className }: LogosSectionProps) {
           </div>
 
           {/* ORGANIZATORZY */}
-          <div className="flex-1">
-            <h3 className="text-lg font-semibold mb-6 text-center md:text-left">
+          <div>
+            <h3 className="text-lg font-semibold mb-6 text-center">
               ORGANIZATORZY
             </h3>
-            <div className="flex flex-wrap items-center justify-center md:justify-start gap-6">
+            <div className="flex flex-wrap items-center justify-center gap-6">
               {organizatorLogos.length > 0 ? (
                 organizatorLogos.map((logo, index) => (
                   <img 

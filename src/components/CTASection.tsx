@@ -7,8 +7,20 @@ interface CTASectionProps {
 
 export function CTASection({ className }: CTASectionProps) {
   return (
-    <section className={cn("py-16 md:py-24", className)}>
-      <div className="container mx-auto px-4">
+    <section className={cn("relative overflow-hidden w-full pt-16 pb-20 md:pt-24 md:pb-28", className)}>
+      {/* Background pattern */}
+      <div 
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: 'url(/bg-pixels-grey.svg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+        aria-hidden="true"
+      />
+
+      <div className="relative container mx-auto px-4 py-12 md:py-16">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl animate-in fade-in duration-700">
             Dołącz do wydarzenia
@@ -20,13 +32,14 @@ export function CTASection({ className }: CTASectionProps) {
             <Button 
               asChild
               size="lg"
-              className="text-base px-8 py-6 hover:scale-105 transition-transform"
             >
               <a 
                 href="https://www.facebook.com/events" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                className="gap-4"
               >
+                <img src="/fb-icon.svg" alt="" className="size-6 mb-1" aria-hidden="true" />
                 Dołącz do wydarzenia
               </a>
             </Button>

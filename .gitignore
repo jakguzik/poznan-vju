@@ -77,3 +77,4 @@ src/routeTree.gen.ts
 /src/server/function/CLAUDE.md.bak
 # END Ruler Generated Files
 .cursor/
+.env*.local

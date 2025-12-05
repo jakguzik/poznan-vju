@@ -19,11 +19,31 @@
   animation: fade-in 0.6s ease-out forwards;
 }
 
-/* Smooth transitions dla hover states */
-* {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+/* Slide down animation */
+@keyframes slide-down {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    clip-path: inset(0 0 0 0);
+  }
+  to {
+    clip-path: inset(0 0 100% 0);
+  }
+}
+
+.slide-down {
+  animation: slide-down 0.5s ease-out forwards;
+}
+
+.slide-up {
+  animation: slide-up 0.4s ease-out forwards;
 }
 
 /* Wsparcie dla polskich znaków w fontcie */
@@ -33,12 +53,60 @@
   unicode-range: U+0100-017F, U+0180-024F, U+1E00-1EFF, U+2000-206F, U+2070-209F, U+20A0-20CF, U+2100-214F, U+2190-21FF, U+2200-22FF;
 }
 
+/* LED Marquee Animation */
+@keyframes led-marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.led-marquee-container {
+  position: relative;
+  width: 100%;
+}
+
+.led-marquee-content-wrapper {
+  display: inline-flex;
+}
+
+.led-marquee-content {
+  display: inline-flex;
+  animation: led-marquee-scroll 30s linear infinite;
+  will-change: transform;
+}
+
+/* LED Text Effect */
+.led-text {
+  animation: led-flicker 4s infinite;
+}
+
+@keyframes led-flicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.95;
+  }
+  93% {
+    opacity: 0.98;
+  }
+  94% {
+    opacity: 0.92;
+  }
+  95% {
+    opacity: 1;
+  }
+}
+
 /* Responsywność dla tabel */
 @media (max-width: 768px) {
   table {
     font-size: 0.875rem;
   }
-  
+
   th, td {
     padding: 0.5rem 0.75rem;
   }

@@ -9,8 +9,8 @@
     --card-foreground: oklch(0.19 0.01 248.51);
     --popover: oklch(1.0 0 0);
     --popover-foreground: oklch(0.19 0.01 248.51);
-    --primary: oklch(0.67 0.16 245.0);
-    --primary-foreground: oklch(1.0 0 0);
+    --primary: #F42984;
+    --primary-foreground: #000000;
     --secondary: oklch(0.19 0.01 248.51);
     --secondary-foreground: oklch(1.0 0 0);
     --muted: oklch(0.92 0.0 286.37);
@@ -35,11 +35,11 @@
     --sidebar-accent-foreground: oklch(0.67 0.16 245.0);
     --sidebar-border: oklch(0.93 0.01 238.52);
     --sidebar-ring: oklch(0.68 0.16 243.35);
-    --font-sans: Open Sans, sans-serif;
+    --font-sans: Menlo, monospace;
     --font-serif: Georgia, serif;
     --font-mono: Menlo, monospace;
     --font-heading: "bitcount-grid-double-square", sans-serif;
-    --radius: 1.3rem;
+    --radius: 0;
     --shadow-2xs: 0px 2px 0px 0px hsl(202.82 89.12% 53.14% / 0.0);
     --shadow-xs: 0px 2px 0px 0px hsl(202.82 89.12% 53.14% / 0.0);
     --shadow-sm: 0px 2px 0px 0px hsl(202.82 89.12% 53.14% / 0.0), 0px 1px 2px -1px
@@ -62,8 +62,8 @@
     --card-foreground: oklch(0.89 0 0);
     --popover: oklch(0 0 0);
     --popover-foreground: oklch(0.93 0.0 228.79);
-    --primary: oklch(0.67 0.16 245.01);
-    --primary-foreground: oklch(1.0 0 0);
+    --primary: #F42984;
+    --primary-foreground: #000000;
     --secondary: oklch(0.96 0.0 219.53);
     --secondary-foreground: oklch(0.19 0.01 248.51);
     --muted: oklch(0.21 0 0);
@@ -88,11 +88,11 @@
     --sidebar-accent-foreground: oklch(0.67 0.16 245.01);
     --sidebar-border: oklch(0.38 0.02 240.59);
     --sidebar-ring: oklch(0.68 0.16 243.35);
-    --font-sans: Open Sans, sans-serif;
+    --font-sans: Menlo, monospace;
     --font-serif: Georgia, serif;
     --font-mono: Menlo, monospace;
     --font-heading: "bitcount-grid-double-square", sans-serif;
-    --radius: 1.3rem;
+    --radius: 0;
     --shadow-2xs: 0px 2px 0px 0px hsl(202.82 89.12% 53.14% / 0.0);
     --shadow-xs: 0px 2px 0px 0px hsl(202.82 89.12% 53.14% / 0.0);
     --shadow-sm: 0px 2px 0px 0px hsl(202.82 89.12% 53.14% / 0.0), 0px 1px 2px -1px
@@ -166,7 +166,7 @@
         @apply border-border outline-ring/50;
     }
     body {
-        @apply bg-background text-foreground;
+        @apply bg-background text-foreground font-sans;
     }
     h1, h2, h3, h4, h5, h6 {
         font-family: "bitcount-grid-double-square", var(--font-heading), sans-serif;
