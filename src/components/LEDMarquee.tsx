@@ -1,5 +1,5 @@
 export function LEDMarquee() {
-  const message = 'WIDZIEĆ DŹWIĘK · SŁYSZEĆ ŚWIATŁO · VJ TO ILUZJA KONTROLI · KAŻDY PIXEL MA SWOJĄ HISTORIĘ · ALE PUBLICZNOŚĆ WIDZI TYLKO EFEKT · VJ = VISUAL JOCKEY · ALE KTO TAM WŁAŚCIWIE JEŹDZI? · ';
+  const message = 'POZNAŃ.VJU · AV FESTIWAL · MAŁE ŚWIĘTO VJÓW W POZNANIU · SPOTKANIE ARTYSTÓW WIZUALNYCH · MAPPING · WIZUALIZACJE · VISUAL JOCKEYING · WSPÓLNOTA VJÓW · POZNAŃ.VJU · ';
 
   return (
     <div className="w-full overflow-hidden bg-black border-t border-border relative">
