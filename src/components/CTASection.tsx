@@ -25,7 +25,7 @@ export function CTASection({ className }: CTASectionProps) {
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl animate-in fade-in duration-700 font-sans">
             Dołącz do AV Festiwalu
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground animate-in fade-in duration-700 delay-150">
+          <p className="mt-4 text-lg text-white animate-in fade-in duration-700 delay-150">
             Nie przegap małego święta VJów w Poznaniu. Spotkaj się z artystami wizualnymi, wymień doświadczenia i odkryj świat visual jockeyingu
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in duration-700 delay-300">
