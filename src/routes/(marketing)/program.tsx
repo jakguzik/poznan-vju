@@ -219,33 +219,35 @@ function ProgramPage() {
             </h1>
           </div>
         </div>
-        
-        {/* Day Selector - Full Width */}
-        <div className="sticky top-[73px] lg:top-[117px] z-40 bg-black py-4 mb-8 w-full border-b border-border">
-          <div className="container mx-auto px-4 lg:px-6">
-            <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
-              {programData.map((day) => (
-                <button
-                  key={day.day}
-                  onClick={() => scrollToDay(day.day.toLowerCase())}
-                  className="group flex flex-col items-center px-4 sm:px-6 py-2 sm:py-3 bg-card hover:bg-primary/10 border-2 border-border hover:border-primary transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-                  aria-label={`Przejdź do programu dnia: ${day.day}`}
-                >
-                  <span className="font-heading font-bold text-base sm:text-lg text-foreground group-hover:text-primary transition-colors uppercase">
-                    {day.day}
-                  </span>
-                  <span className="text-[10px] sm:text-xs text-muted-foreground">
-                    {new Date(day.date).toLocaleDateString('pl-PL', {
-                      day: 'numeric',
-                      month: 'short'
-                    })}
-                  </span>
-                </button>
-              ))}
-            </div>
+      </section>
+      
+      {/* Day Selector - Full Width */}
+      <div className="sticky top-[73px] lg:top-[117px] z-40 bg-black py-4 mb-8 w-full border-b border-border">
+        <div className="container mx-auto px-4 lg:px-6">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
+            {programData.map((day) => (
+              <button
+                key={day.day}
+                onClick={() => scrollToDay(day.day.toLowerCase())}
+                className="group flex flex-col items-center px-4 sm:px-6 py-2 sm:py-3 bg-card hover:bg-primary/10 border-2 border-border hover:border-primary transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                aria-label={`Przejdź do programu dnia: ${day.day}`}
+              >
+                <span className="font-heading font-bold text-base sm:text-lg text-foreground group-hover:text-primary transition-colors uppercase">
+                  {day.day}
+                </span>
+                <span className="text-[10px] sm:text-xs text-muted-foreground">
+                  {new Date(day.date).toLocaleDateString('pl-PL', {
+                    day: 'numeric',
+                    month: 'short'
+                  })}
+                </span>
+              </button>
+            ))}
           </div>
         </div>
-        
+      </div>
+      
+      <section className="pb-20 md:pb-28">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl"> {/* Reduced width for better readability */}
             <div className="space-y-24 pb-8 w-full">
