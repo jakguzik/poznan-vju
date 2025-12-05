@@ -40,7 +40,7 @@ export function Navigation() {
 
   return (
     <header className="sticky top-0 z-50 border-b bg-black">
-      <nav className="flex items-center justify-between px-6 py-4 w-full">
+      <nav className="flex items-center justify-between px-6 py-4 w-full h-[73px] lg:h-[89px]">
         <Link 
           to="/" 
           className="transition-opacity hover:opacity-80"
@@ -71,7 +71,7 @@ export function Navigation() {
           <Button 
             asChild
             size="sm"
-            className="ml-2"
+            className="ml-2 whitespace-nowrap"
           >
             <a 
               href="https://www.facebook.com/events" 
@@ -79,7 +79,7 @@ export function Navigation() {
               rel="noopener noreferrer"
               className="gap-3"
             >
-              <img src="/fb-icon.svg" alt="" className="size-5 mb-1" aria-hidden="true" />
+              <img src="/fb-icon.svg" alt="" className="size-5" aria-hidden="true" />
               Dołącz do wydarzenia
             </a>
           </Button>
@@ -146,7 +146,7 @@ export function Navigation() {
                 onClick={handleMenuClose}
                 className="gap-3"
               >
-                <img src="/fb-icon.svg" alt="" className="size-5 mb-1" aria-hidden="true" />
+                <img src="/fb-icon.svg" alt="" className="size-5" aria-hidden="true" />
                 Dołącz do wydarzenia
               </a>
             </Button>
