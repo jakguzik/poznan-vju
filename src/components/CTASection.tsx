@@ -28,18 +28,19 @@ export function CTASection({ className }: CTASectionProps) {
           <p className="mt-4 text-lg text-white animate-in fade-in duration-700 delay-150">
             Nie przegap małego święta VJów w Poznaniu. Spotkaj się z artystami wizualnymi, wymień doświadczenia i odkryj świat visual jockeyingu
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in duration-700 delay-300">
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center w-full max-w-sm sm:max-w-none mx-auto animate-in fade-in duration-700 delay-300">
             <Button 
               asChild
               size="lg"
+              className="w-full sm:w-auto text-sm sm:text-base whitespace-nowrap"
             >
               <a 
                 href="https://fb.me/e/6FG15V2nL" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="gap-4"
+                className="gap-2 sm:gap-3"
               >
-                <img src="/fb-icon.svg" alt="" className="size-6 mb-1" aria-hidden="true" />
+                <img src="/fb-icon.svg" alt="" className="size-4 sm:size-5 mb-1" aria-hidden="true" />
                 Dołącz do wydarzenia
               </a>
             </Button>
