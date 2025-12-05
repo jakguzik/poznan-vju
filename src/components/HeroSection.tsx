@@ -6,7 +6,7 @@ export function HeroSection() {
     <section className="relative h-[calc(100vh-96px)] sm:h-[calc(100vh-112px)] overflow-hidden flex items-center justify-center">
       {/* Background pattern */}
       <div 
-        className="absolute inset-[24px] sm:inset-[32px] md:inset-[40px] lg:inset-[48px] pointer-events-none"
+        className="absolute inset-[32px] sm:inset-[40px] md:inset-[50px] pointer-events-none"
         style={{
           backgroundImage: 'url(/bg-pixels.svg)',
           backgroundSize: 'auto 100%',
@@ -35,25 +35,27 @@ export function HeroSection() {
         </div>
         
         {/* Buttons */}
-        <div className="animate-in fade-in duration-1000 delay-500 flex flex-col sm:flex-row gap-4 justify-center w-full">
-          <Button 
+        <div className="animate-in fade-in duration-1000 delay-500 flex flex-col sm:flex-row gap-4 justify-center w-full max-w-sm sm:max-w-none">
+          <Button
             asChild
             size="lg"
+            className="w-full sm:w-auto text-sm sm:text-base whitespace-nowrap"
           >
-            <a 
-              href="https://www.facebook.com/events" 
-              target="_blank" 
+            <a
+              href="https://fb.me/e/6FG15V2nL"
+              target="_blank"
               rel="noopener noreferrer"
-              className="gap-4"
+              className="gap-2 sm:gap-3"
             >
-              <img src="/fb-icon.svg" alt="" className="size-6 mb-1" aria-hidden="true" />
+              <img src="/fb-icon.svg" alt="" className="size-4 sm:size-5 mb-1" aria-hidden="true" />
               Dołącz do wydarzenia
             </a>
           </Button>
-          <Button 
+          <Button
             asChild
             variant="secondary"
             size="lg"
+            className="w-full sm:w-auto text-sm sm:text-base whitespace-nowrap"
           >
             <Link to="/program">
               Sprawdź program

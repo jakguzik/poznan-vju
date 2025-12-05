@@ -74,7 +74,7 @@ export function Navigation() {
             className="ml-2 whitespace-nowrap"
           >
             <a 
-              href="https://www.facebook.com/events" 
+              href="https://fb.me/e/6FG15V2nL" 
               target="_blank" 
               rel="noopener noreferrer"
               className="gap-3"
@@ -115,41 +115,45 @@ export function Navigation() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className={cn(
-          "lg:hidden absolute top-full left-0 right-0 border-t bg-black z-50",
+          "lg:hidden fixed top-[73px] left-0 right-0 bottom-0 bg-black z-50 overflow-y-auto",
           isClosing ? "slide-up" : "slide-down"
         )}>
-          <div className="px-6 py-4 flex flex-col gap-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                onClick={handleMenuClose}
-                className={cn(
-                  "text-base font-medium py-2 transition-colors",
-                  isActive(link.to) 
-                    ? "text-foreground" 
-                    : "text-muted-foreground hover:text-foreground"
-                )}
+          <div className="px-6 py-8 flex flex-col items-center justify-center min-h-full gap-8">
+            <div className="flex flex-col items-center gap-6 w-full">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  onClick={handleMenuClose}
+                  className={cn(
+                    "text-lg font-medium py-2 transition-colors text-center",
+                    isActive(link.to)
+                      ? "text-foreground"
+                      : "text-muted-foreground hover:text-foreground"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
+              <Button
+                asChild
+                size="default"
+                className="w-full"
               >
-                {link.label}
-              </Link>
-            ))}
-            <Button 
-              asChild
-              size="sm"
-              className="mt-2"
-            >
-              <a
-                href="https://www.facebook.com/events"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={handleMenuClose}
-                className="gap-3"
-              >
-                <img src="/fb-icon.svg" alt="" className="size-5" aria-hidden="true" />
-                Dołącz do wydarzenia
-              </a>
-            </Button>
+                <a
+                  href="https://fb.me/e/6FG15V2nL"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={handleMenuClose}
+                  className="gap-3"
+                >
+                  <img src="/fb-icon.svg" alt="" className="size-6 mb-1" aria-hidden="true" />
+                  Dołącz do wydarzenia
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       )}

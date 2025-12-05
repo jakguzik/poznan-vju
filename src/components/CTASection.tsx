@@ -22,8 +22,8 @@ export function CTASection({ className }: CTASectionProps) {
 
       <div className="relative container mx-auto px-4 py-12 md:py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl animate-in fade-in duration-700 font-sans">
-            Dołącz do AV Festiwalu
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl animate-in fade-in duration-700 font-heading uppercase">
+            WIDZIMY SIĘ?
           </h2>
           <p className="mt-4 text-lg text-white animate-in fade-in duration-700 delay-150">
             Nie przegap małego święta VJów w Poznaniu. Spotkaj się z artystami wizualnymi, wymień doświadczenia i odkryj świat visual jockeyingu
@@ -34,7 +34,7 @@ export function CTASection({ className }: CTASectionProps) {
               size="lg"
             >
               <a 
-                href="https://www.facebook.com/events" 
+                href="https://fb.me/e/6FG15V2nL" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="gap-4"

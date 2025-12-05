@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { CTASection } from '~/components/CTASection';
+import { Button } from '~/components/ui/button';
 import { cn } from '~/lib/utils';
 
 export const Route = createFileRoute('/(marketing)/program')({
@@ -21,6 +22,8 @@ interface Venue {
   name: string;
   address?: string;
   events: ProgramEvent[];
+  fbLink?: string;
+  fbLabel?: string;
 }
 
 interface ProgramDay {
@@ -37,6 +40,8 @@ const programData: ProgramDay[] = [
       {
         name: 'Poczta Workspace',
         address: 'ul. 23 Lutego 26, Poznań',
+        fbLink: 'https://fb.me/e/6FG15V2nL',
+        fbLabel: 'SPRAWDŹ DZIEŃ 1',
         events: [
           { time: '17:30', duration: '30 min', title: 'Konferencja prasowa w TAMIE', type: 'info' },
           { time: '18:00', duration: '30 min', title: 'Prezentacja programu', type: 'talk' },
@@ -66,6 +71,8 @@ const programData: ProgramDay[] = [
       {
         name: 'Uniwersytet Artystyczny (UAP)',
         address: 'Al. Marcinkowskiego 29, Poznań',
+        fbLink: 'https://fb.me/e/6nKgtLRSt',
+        fbLabel: 'SPRAWDŹ DZIEŃ 2',
         events: [
           { time: '17:30', duration: '1h', title: 'Warsztaty Resolume', speakers: ['Kuba'], type: 'workshop' },
           { time: '18:40', duration: '40 min', title: 'Prezentacja', speakers: ['Grzegorz Leszczyński'], type: 'talk' },
@@ -83,6 +90,8 @@ const programData: ProgramDay[] = [
       {
         name: 'I LO im. Karola Marcinkowskiego ("Marcinek")',
         address: 'ul. Bukowska 16, Poznań',
+        fbLink: 'https://fb.me/e/2uIIQla9Ul',
+        fbLabel: 'SPRAWDŹ PRELEKCJE',
         events: [
           { 
             time: '14:30', 
@@ -154,6 +163,8 @@ const programData: ProgramDay[] = [
       {
         name: 'Blue Note Jazz Club',
         address: 'ul. Kościuszki 79 (CK Zamek), Poznań',
+        fbLink: 'https://fb.me/e/98m39XS8G',
+        fbLabel: 'SPRAWDŹ VJ BATTLE',
         events: [
           { time: '20:30', title: 'Otwarcie drzwi', type: 'info' },
           { time: '21:00', duration: '1h 45 min', title: 'VJ Battle — Start', type: 'battle' },
@@ -282,7 +293,7 @@ function ProgramPage() {
                               )}
                             >
                               {/* Time Column */}
-                              <div className="flex flex-col items-start pt-1">
+                              <div className="flex flex-col items-start">
                                 <span className={cn(
                                   "font-mono font-bold text-lg",
                                   event.type === 'break' ? 'text-muted-foreground text-base' : 'text-foreground',
@@ -342,6 +353,27 @@ function ProgramPage() {
                             </div>
                           ))}
                         </div>
+
+                        {/* FB Link Button */}
+                        {venue.fbLink && venue.fbLabel && (
+                          <div className="mt-8 flex justify-start">
+                            <Button 
+                              asChild
+                              size="lg"
+                              className="uppercase font-bold"
+                            >
+                              <a 
+                                href={venue.fbLink} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="gap-3"
+                              >
+                                <img src="/fb-icon.svg" alt="" className="size-6 mb-1" aria-hidden="true" />
+                                {venue.fbLabel}
+                              </a>
+                            </Button>
+                          </div>
+                        )}
                       </div>
                     ))}
                   </div>
