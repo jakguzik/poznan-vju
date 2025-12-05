@@ -221,7 +221,7 @@ function ProgramPage() {
         </div>
         
         {/* Day Selector - Full Width */}
-        <div className="sticky top-[73px] lg:top-[116px] z-40 bg-black py-4 mb-8 w-full border-b border-border">
+        <div className="sticky top-[73px] lg:top-[89px] z-40 bg-black py-4 mb-8 w-full border-b border-border">
           <div className="container mx-auto px-4 lg:px-6">
             <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
               {programData.map((day) => (
