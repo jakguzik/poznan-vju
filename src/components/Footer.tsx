@@ -1,5 +1,3 @@
-import { Link } from '@tanstack/react-router';
-
 export function Footer() {
   return (
     <footer className="border-t bg-background">
@@ -8,25 +6,12 @@ export function Footer() {
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Poznań.VJU. Wszystkie prawa zastrzeżone.
           </p>
-          <div className="flex gap-4 text-sm text-muted-foreground">
-            <Link 
-              to="/" 
-              className="transition-colors hover:text-foreground"
-            >
-              Strona główna
-            </Link>
-            <Link 
-              to="/program" 
-              className="transition-colors hover:text-foreground"
-            >
-              Program
-            </Link>
-            <Link 
-              to="/prelegenci" 
-              className="transition-colors hover:text-foreground"
-            >
-              Prelegenci
-            </Link>
+          <div className="mt-4">
+            <img 
+              src="/EU.svg" 
+              alt="Unia Europejska" 
+              className="h-8 w-auto opacity-50"
+            />
           </div>
         </div>
       </div>

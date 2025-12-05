@@ -1,5 +1,6 @@
 import type { QueryClient } from "@tanstack/react-query"
-import { HeadContent, Outlet, Scripts, createRootRouteWithContext } from "@tanstack/react-router"
+import { HeadContent, Outlet, Scripts, createRootRouteWithContext, useLocation } from "@tanstack/react-router"
+import { useEffect } from "react"
 import type * as React from "react"
 import { Toaster } from "sonner"
 import { DefaultCatchBoundary } from "~/components/DefaultCatchBoundary"
@@ -83,6 +84,13 @@ export const Route = createRootRouteWithContext<{
 })
 
 function RootComponent() {
+    const location = useLocation()
+    
+    // Scroll to top on route change
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [location.pathname])
+    
     return (
         <RootDocument>
             <Outlet />

@@ -28,7 +28,7 @@ export function LogosSection({ className }: LogosSectionProps) {
   return (
     <section className={cn("py-12 md:py-16", className)}>
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row gap-12 md:gap-24 justify-center items-center md:items-start">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 justify-center items-center lg:items-start">
           {/* PATRONAT MEDIALNY */}
           <div>
             <h3 className="text-lg font-semibold mb-6 text-center">
