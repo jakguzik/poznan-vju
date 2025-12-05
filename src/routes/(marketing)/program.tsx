@@ -2,9 +2,21 @@ import { createFileRoute } from '@tanstack/react-router';
 import { CTASection } from '~/components/CTASection';
 import { Button } from '~/components/ui/button';
 import { cn } from '~/lib/utils';
+import { seo } from '~/utils/seo';
 
 export const Route = createFileRoute('/(marketing)/program')({
   component: ProgramPage,
+  head: () => ({
+    meta: [
+      ...seo({
+        title: "Program - Poznań.VJU 2025 | AV Festiwal",
+        description: "Program Poznań.VJU 2025 (16-18.12.2025). Warsztaty Resolume, prelekcje, panele dyskusyjne, VJ Battle i after party. Sprawdź szczegółowy program wydarzenia.",
+        keywords: "Poznań.VJU program, AV Festiwal program, VJ Battle, warsztaty Resolume, prelekcje VJ, Poznań 2025",
+        image: "/opengraph.png",
+        url: "/program"
+      })
+    ]
+  })
 });
 
 type EventType = 'talk' | 'workshop' | 'panel' | 'break' | 'party' | 'battle' | 'info';

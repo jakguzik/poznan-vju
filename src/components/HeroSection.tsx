@@ -28,9 +28,9 @@ export function HeroSection() {
         {/* Logo */}
         <div className="animate-in fade-in duration-1000 w-full max-w-3xl mx-auto flex justify-center">
           <img 
-            src="/logo-hero.svg" 
+            src="/PZV-logo.svg" 
             alt="Poznań.VJU" 
-            className="h-32 sm:h-40 md:h-48 lg:h-56 w-auto object-contain"
+            className="h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 w-auto object-contain"
           />
         </div>
         

@@ -1,9 +1,21 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { CTASection } from '~/components/CTASection';
 import { cn } from '~/lib/utils';
+import { seo } from '~/utils/seo';
 
 export const Route = createFileRoute('/(marketing)/prelegenci')({
   component: PrelegenciPage,
+  head: () => ({
+    meta: [
+      ...seo({
+        title: "Prelegenci - Poznań.VJU 2025 | AV Festiwal",
+        description: "Poznaj prelegentów Poznań.VJU 2025. Eksperci visual jockeyingu, mapping, produkcji wizualnej i współpracy VJ z artystami. Dołącz do wydarzenia 16-18.12.2025.",
+        keywords: "Poznań.VJU prelegenci, VJ prelegenci, visual jockey prelegenci, mapping Poznań, AV Festiwal prelegenci",
+        image: "/opengraph.png",
+        url: "/prelegenci"
+      })
+    ]
+  })
 });
 
 // Przykładowe dane prelegentów - później można przenieść do osobnego pliku

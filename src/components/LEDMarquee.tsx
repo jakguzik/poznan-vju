@@ -1,5 +1,5 @@
 export function LEDMarquee() {
-  const message = 'POZNAŃ.VJU · AV FESTIWAL · MAŁE ŚWIĘTO VJÓW W POZNANIU · SPOTKANIE ARTYSTÓW WIZUALNYCH · MAPPING · WIZUALIZACJE · VISUAL JOCKEYING · WSPÓLNOTA VJÓW · POZNAŃ.VJU · ';
+  const message = 'POZNAŃ.VJU · AV FESTIWAL · MAŁE ŚWIĘTO VJÓW W POZNANIU · SPOTKANIE ARTYSTÓW WIZUALNYCH · MAPPING · WIZUALIZACJE · VISUAL JOCKEYING · WSPÓLNOTA VJÓW · ';
 
   return (
     <div className="w-full overflow-hidden bg-black border-t border-border relative">

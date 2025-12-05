@@ -28,7 +28,11 @@ export const Route = createRootRouteWithContext<{
             },
             ...seo({
                 title: "Poznań.VJU - AV Festiwal | Małe święto VJów w Poznaniu",
-                description: "Dołącz do Poznań.VJU - AV festiwalu i małego święta VJów w Poznaniu. Spotkaj się z artystami wizualnymi, wymień doświadczenia i odkryj świat visual jockeyingu"
+                description: "Dołącz do Poznań.VJU - AV festiwalu i małego święta VJów w Poznaniu (16-18.12.2025). Spotkaj się z artystami wizualnymi, wymień doświadczenia i odkryj świat visual jockeyingu. Warsztaty, prelekcje, panele dyskusyjne i VJ Battle.",
+                keywords: "Poznań.VJU, AV Festiwal, VJ, visual jockey, Poznań, festiwal, wizualizacje, mapping, video art, 2025",
+                image: "/opengraph.png",
+                url: "/",
+                siteName: "Poznań.VJU"
             })
         ],
         links: [
@@ -101,7 +105,7 @@ function RootComponent() {
 function RootDocument({ children }: { children: React.ReactNode }) {
     const initial = Route.useLoaderData() as Theme
     return (
-        <html lang="en" className={initial === "system" ? "" : initial}>
+        <html lang="pl" className={initial === "system" ? "" : initial}>
             <head>
                 <ThemeInitScript />
                 <HeadContent />
