@@ -22,7 +22,7 @@ export function CTASection({ className }: CTASectionProps) {
 
       <div className="relative container mx-auto px-4 py-12 md:py-16">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl animate-in fade-in duration-700">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl animate-in fade-in duration-700 font-sans">
             Dołącz do AV Festiwalu
           </h2>
           <p className="mt-4 text-lg text-muted-foreground animate-in fade-in duration-700 delay-150">
