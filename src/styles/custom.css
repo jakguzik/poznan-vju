@@ -74,6 +74,7 @@
 
 .led-marquee-content {
   display: inline-flex;
+  gap: 2rem;
   animation: led-marquee-scroll 30s linear infinite;
   will-change: transform;
 }

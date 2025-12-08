@@ -86,7 +86,7 @@ const programData: ProgramDay[] = [
         fbLink: 'https://fb.me/e/6nKgtLRSt',
         fbLabel: 'SPRAWDŹ DZIEŃ 2',
         events: [
-          { time: '17:30', duration: '1h', title: 'Warsztaty Kuba Guzik Resolume na UAP', speakers: ['Kuba Guzik'], type: 'workshop' },
+          { time: '17:30', duration: '1h', title: 'Warsztaty Resolume', speakers: ['Kuba Guzik'], type: 'workshop' },
           { time: '18:40', duration: '40 min', title: 'Prezentacja', speakers: ['Grzegorz Leszczyński'], type: 'talk' },
           { time: '19:30', duration: '40 min', title: 'Prezentacja', speakers: ['Michał Mierzwa'], type: 'talk' },
           { time: '20:20', duration: '40 min', title: 'Prezentacja', speakers: ['Karolina Jacewicz'], type: 'talk' },
