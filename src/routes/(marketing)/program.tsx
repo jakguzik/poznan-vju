@@ -62,7 +62,7 @@ const programData: ProgramDay[] = [
             duration: '1h 20 min', 
             title: 'Panel otwarcia', 
             type: 'panel',
-            speakers: ['Karolina Jacewicz', 'Mikołaj Szymczak-Jaksim', 'Kuba Guzik', 'Grzegorz Leszczyński', 'Clockwork', 'Michał Mierzwa', 'FTVision', 'Lola', 'Kuśwa VJs', 'Pixelo', 'Laserowy Maciej']
+            speakers: ['Karolina Jacewicz', 'Mikołaj Ludwik Jaksim', 'Kuba Guzik', 'Grzegorz Leszczyński', 'Clockwork', 'Michał Mierzwa', 'FTVision', 'Lola', 'Kuśwa VJs', 'Pixelo', 'Laserowy Maciej']
           },
           { 
             time: '20:00', 
