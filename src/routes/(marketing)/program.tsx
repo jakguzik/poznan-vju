@@ -62,14 +62,14 @@ const programData: ProgramDay[] = [
             duration: '1h 20 min', 
             title: 'Panel otwarcia', 
             type: 'panel',
-            speakers: ['Karolina', 'Mikołaj', 'Kuba Guzik', 'Grzegorz Leszczyński', 'Clockwork', 'Michał Mierzwa', 'FTVision', 'Lola', 'Kuśwa VJs', 'Pixelo', 'Laserowy Maciej']
+            speakers: ['Karolina Jacewicz', 'Mikołaj Szymczak-Jaksim', 'Kuba Guzik', 'Grzegorz Leszczyński', 'Clockwork', 'Michał Mierzwa', 'FTVision', 'Lola', 'Kuśwa VJs', 'Pixelo', 'Laserowy Maciej']
           },
           { 
             time: '20:00', 
             duration: '1h', 
             title: 'Produkcja o współpracy z VJ', 
             type: 'panel',
-            speakers: ['Aulina Tarnawska', 'Sara Kordek', 'Joanna Tomczak', 'Arek Śmiłowski']
+            speakers: ['Paulina Tarnawska', 'Sara Kordek', 'Joanna Tomczak', 'Arek Śmiłowski']
           },
           { time: '21:00', title: 'Koniec', type: 'info' },
         ],
@@ -86,10 +86,10 @@ const programData: ProgramDay[] = [
         fbLink: 'https://fb.me/e/6nKgtLRSt',
         fbLabel: 'SPRAWDŹ DZIEŃ 2',
         events: [
-          { time: '17:30', duration: '1h', title: 'Warsztaty Resolume', speakers: ['Kuba'], type: 'workshop' },
+          { time: '17:30', duration: '1h', title: 'Warsztaty Kuba Guzik Resolume na UAP', speakers: ['Kuba Guzik'], type: 'workshop' },
           { time: '18:40', duration: '40 min', title: 'Prezentacja', speakers: ['Grzegorz Leszczyński'], type: 'talk' },
           { time: '19:30', duration: '40 min', title: 'Prezentacja', speakers: ['Michał Mierzwa'], type: 'talk' },
-          { time: '20:20', duration: '40 min', title: 'Prezentacja', speakers: ['Karolina'], type: 'talk' },
+          { time: '20:20', duration: '40 min', title: 'Prezentacja', speakers: ['Karolina Jacewicz'], type: 'talk' },
           { time: '21:00', title: 'Koniec', type: 'info' },
         ],
       },
@@ -108,7 +108,7 @@ const programData: ProgramDay[] = [
           { 
             time: '14:30', 
             duration: '20 min', 
-            title: 'O TEDx i współpracy WJU z LO nr1 — Otwarcie', 
+            title: 'Clockwork - Showroom w sali obok auli w Marcinku / O TEDx i współpracy WJU z LO nr1 — Otwarcie', 
             speakers: ['Mikołaj'], 
             type: 'talk' 
           },
@@ -120,28 +120,28 @@ const programData: ProgramDay[] = [
             type: 'talk' 
           },
           { 
-            time: '15:30', 
+            time: '15:20', 
             duration: '20 min', 
             title: 'Od Visual Family Collective do TVN', 
             speakers: ['Tomek Grzeszczuk'], 
             type: 'talk' 
           },
           { 
-            time: '16:00', 
+            time: '15:40', 
             duration: '20 min', 
             title: 'TBA', 
             speakers: ['Tom Skof'], 
             type: 'talk' 
           },
           { 
-            time: '16:30', 
+            time: '16:00', 
             duration: '20 min', 
             title: 'Wesoła Immersive', 
             speakers: ['Ludwik AV'], 
             type: 'talk' 
           },
           { 
-            time: '17:00', 
+            time: '16:20', 
             duration: '30 min', 
             title: 'Mapping na Poznańskim Teatrze Wielkim — Ewolucja przez lata', 
             description: 'Techniki powstawania mappingu',
@@ -149,27 +149,27 @@ const programData: ProgramDay[] = [
             type: 'talk' 
           },
           { 
-            time: '17:40', 
+            time: '16:50', 
             duration: '40 min', 
             title: 'LJ/VJ Collabo', 
             speakers: ['Adam Serek', 'FKS - EYE'], 
             type: 'talk' 
           },
           { 
-            time: '18:30', 
+            time: '17:30', 
             duration: '40 min', 
             title: 'TOP VJ', 
             speakers: ['Emiko'], 
             type: 'talk' 
           },
           { 
-            time: '19:20', 
+            time: '18:10', 
             duration: '40 min', 
             title: 'TOP VJ', 
             speakers: ['Puch', 'Deruba'], 
             type: 'talk' 
           },
-          { time: '20:00', title: 'Koniec w Marcinku', type: 'info' },
+          { time: '18:50', title: 'Koniec w Marcinku', type: 'info' },
         ],
       },
       {
@@ -314,7 +314,7 @@ function ProgramPage() {
                                   {event.time}
                                 </span>
                                 {event.duration && (
-                                  <span className="text-xs text-muted-foreground/60 font-mono mt-1">
+                                  <span className="text-xs text-muted-foreground/80 font-mono mt-2">
                                     {event.duration}
                                   </span>
                                 )}
