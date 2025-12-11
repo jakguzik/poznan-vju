@@ -16,6 +16,14 @@ const patronatLogos: Logo[] = [
   { src: '/afera-logo.svg', alt: 'Afera', height: 'h-20 md:h-24' },
 ];
 
+// Logo partnerów
+const partnerLogos: Logo[] = [
+  { src: '/bluenote-logo.svg', alt: 'Blue Note', height: 'h-12 md:h-14' },
+  { src: '/goodtaste-logo.svg', alt: 'Good Taste', height: 'h-12 md:h-14' },
+  { src: '/marcinek-logo.svg', alt: 'Marcinek', height: 'h-12 md:h-14' },
+  { src: '/poczta-cowork-logo.svg', alt: 'Poczta Co-Work', height: 'h-12 md:h-14' },
+];
+
 // Logo organizatorów
 const organizatorLogos: Logo[] = [
   { src: '/vju-logo.svg', alt: 'VJU', height: 'h-8 md:h-10' },
@@ -37,16 +45,33 @@ export function LogosSection({ className }: LogosSectionProps) {
             <div className="flex flex-wrap items-center justify-center gap-10">
               {patronatLogos.length > 0 ? (
                 patronatLogos.map((logo, index) => (
-                  <img 
+                  <img
                     key={index}
-                    src={logo.src} 
-                    alt={logo.alt} 
+                    src={logo.src}
+                    alt={logo.alt}
                     className={cn("w-auto opacity-70 hover:opacity-100 transition-opacity", logo.height || "h-12")}
                   />
                 ))
               ) : (
                 <p className="text-sm text-muted-foreground">Logo patronów medialnych</p>
               )}
+            </div>
+          </div>
+
+          {/* PARTNERZY */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6 text-center">
+              PARTNERZY
+            </h3>
+            <div className="flex flex-wrap items-center justify-center gap-10">
+              {partnerLogos.map((logo, index) => (
+                <img
+                  key={index}
+                  src={logo.src}
+                  alt={logo.alt}
+                  className={cn("w-auto opacity-70 hover:opacity-100 transition-opacity", logo.height || "h-12")}
+                />
+              ))}
             </div>
           </div>
 

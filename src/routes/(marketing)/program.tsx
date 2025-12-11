@@ -55,21 +55,21 @@ const programData: ProgramDay[] = [
         fbLink: 'https://fb.me/e/6FG15V2nL',
         fbLabel: 'SPRAWDŹ DZIEŃ 1',
         events: [
-          { time: '17:30', duration: '30 min', title: 'Konferencja prasowa w TAMIE', type: 'info' },
+          { time: '17:30', duration: '30 min', title: 'Konferencja prasowa', type: 'info' },
           { time: '18:00', duration: '30 min', title: 'Prezentacja programu', type: 'talk' },
-          { 
-            time: '18:30', 
-            duration: '1h 20 min', 
-            title: 'Panel otwarcia', 
+          {
+            time: '18:30',
+            duration: '1h 20 min',
+            title: 'Panel otwarcia — Społeczny wymiar VJingu',
             type: 'panel',
-            speakers: ['Karolina Jacewicz', 'Mikołaj Ludwik Jaksim', 'Kuba Guzik', 'Grzegorz Leszczyński', 'Clockwork', 'Michał Mierzwa', 'FTVision', 'Lola', 'Kuśwa VJs', 'Pixelo', 'Laserowy Maciej']
+            speakers: ['Karolina Jacewicz', 'Mikołaj Ludwik Jaksim', 'Kuba Guzik', 'Grzegorz Leszczyński', 'Clockwork', 'Michał Mierzwa', 'FTVISION', 'Lola', 'Kuśwa VJs', 'Pixelo', 'Laserowy Maciej']
           },
-          { 
-            time: '20:00', 
-            duration: '1h', 
-            title: 'Produkcja o współpracy z VJ', 
+          {
+            time: '20:00',
+            duration: '1h',
+            title: 'Produkcja o współpracy z VJ',
             type: 'panel',
-            speakers: ['Paulina Tarnawska', 'Sara Kordek', 'Joanna Tomczak', 'Arek Śmiłowski']
+            speakers: ['Karolina Jacewicz', 'Mikołaj Ludwik Jaksim', 'Paulina Tarnawska', 'Sara Kordek', 'Joanna Tomczak', 'Arek Śmiłowski']
           },
           { time: '21:00', title: 'Koniec', type: 'info' },
         ],
@@ -86,10 +86,34 @@ const programData: ProgramDay[] = [
         fbLink: 'https://fb.me/e/6nKgtLRSt',
         fbLabel: 'SPRAWDŹ DZIEŃ 2',
         events: [
-          { time: '17:30', duration: '1h', title: 'Warsztaty Resolume', speakers: ['Kuba Guzik'], type: 'workshop' },
-          { time: '18:40', duration: '40 min', title: 'Prezentacja', speakers: ['Grzegorz Leszczyński'], type: 'talk' },
-          { time: '19:30', duration: '40 min', title: 'Prezentacja', speakers: ['Michał Mierzwa'], type: 'talk' },
-          { time: '20:20', duration: '40 min', title: 'Prezentacja', speakers: ['Karolina Jacewicz'], type: 'talk' },
+          {
+            time: '17:30',
+            duration: '1h',
+            title: 'Warsztaty Resolume',
+            speakers: ['Kuba Guzik'],
+            type: 'workshop'
+          },
+          {
+            time: '18:40',
+            duration: '40 min',
+            title: 'Geometry Nodes — Środowisko Blender z potencjałem dla kreatywnych praktyków VJ',
+            speakers: ['Grzegorz Leszczyński'],
+            type: 'talk'
+          },
+          {
+            time: '19:30',
+            duration: '40 min',
+            title: 'Brand Design — Z undergroundu do deadlineów',
+            speakers: ['Michał Mierzwa'],
+            type: 'talk'
+          },
+          {
+            time: '20:20',
+            duration: '40 min',
+            title: 'Wideoscenografia — Od klubowego VJingu do opery',
+            speakers: ['Karolina Jacewicz'],
+            type: 'talk'
+          },
           { time: '21:00', title: 'Koniec', type: 'info' },
         ],
       },
@@ -105,71 +129,63 @@ const programData: ProgramDay[] = [
         fbLink: 'https://fb.me/e/2uIIQla9Ul',
         fbLabel: 'SPRAWDŹ PRELEKCJE',
         events: [
-          { 
-            time: '14:30', 
-            duration: '20 min', 
-            title: 'Clockwork - Showroom w sali obok auli w Marcinku / O TEDx i współpracy WJU z LO nr1 — Otwarcie', 
-            speakers: ['Mikołaj'], 
-            type: 'talk' 
+          {
+            time: '14:30',
+            duration: '20 min',
+            title: 'TEDx i współpraca WJU — Otwarcie',
+            speakers: ['Mikołaj'],
+            type: 'talk'
           },
-          { 
-            time: '15:00', 
-            duration: '20 min', 
-            title: 'Od Visual Family Collective do ATM Virtual Studio', 
-            speakers: ['Kuba Grzeszczuk'], 
-            type: 'talk' 
+          {
+            time: '15:00',
+            duration: '20 min',
+            title: 'Od Visual Family Collective do ATM Virtual Studio',
+            speakers: ['Kuba Grzeszczuk'],
+            type: 'talk'
           },
-          { 
-            time: '15:20', 
-            duration: '20 min', 
-            title: 'Od Visual Family Collective do TVN', 
-            speakers: ['Tomek Grzeszczuk'], 
-            type: 'talk' 
+          {
+            time: '15:30',
+            duration: '20 min',
+            title: 'Od Visual Family Collective do TVN',
+            speakers: ['Tomek Grzeszczuk'],
+            type: 'talk'
           },
-          { 
-            time: '15:40', 
-            duration: '20 min', 
-            title: 'TBA', 
-            speakers: ['Tom Skof'], 
-            type: 'talk' 
+          {
+            time: '16:00',
+            duration: '20 min',
+            title: 'Experimental AV — SSM Collective, Localhost.tv',
+            speakers: ['Tom Skof'],
+            type: 'talk'
           },
-          { 
-            time: '16:00', 
-            duration: '20 min', 
-            title: 'Wesoła Immersive', 
-            speakers: ['Ludwik AV'], 
-            type: 'talk' 
+          {
+            time: '16:30',
+            duration: '30 min',
+            title: 'Wesoła Immersive',
+            speakers: ['Ludwik AV'],
+            type: 'talk'
           },
-          { 
-            time: '16:20', 
-            duration: '30 min', 
-            title: 'Mapping na Poznańskim Teatrze Wielkim — Ewolucja przez lata', 
-            description: 'Techniki powstawania mappingu',
-            speakers: ['Clockwork'], 
-            type: 'talk' 
+          {
+            time: '17:40',
+            duration: '40 min',
+            title: 'Live Jamming LJ/VJ',
+            speakers: ['FKS - Eye'],
+            type: 'talk'
           },
-          { 
-            time: '16:50', 
-            duration: '40 min', 
-            title: 'LJ/VJ Collabo', 
-            speakers: ['Adam Serek', 'FKS - EYE'], 
-            type: 'talk' 
+          {
+            time: '18:30',
+            duration: '40 min',
+            title: 'VJ Mastery',
+            speakers: ['Emiko'],
+            type: 'talk'
           },
-          { 
-            time: '17:30', 
-            duration: '40 min', 
-            title: 'TOP VJ', 
-            speakers: ['Emiko'], 
-            type: 'talk' 
+          {
+            time: '19:20',
+            duration: '40 min',
+            title: 'VJ Masters',
+            speakers: ['puh + deruba', 'Pushka Studio'],
+            type: 'talk'
           },
-          { 
-            time: '18:10', 
-            duration: '40 min', 
-            title: 'TOP VJ', 
-            speakers: ['Puch', 'Deruba'], 
-            type: 'talk' 
-          },
-          { time: '18:50', title: 'Koniec w Marcinku', type: 'info' },
+          { time: '20:00', title: 'Koniec w Marcinku', type: 'info' },
         ],
       },
       {
@@ -179,9 +195,8 @@ const programData: ProgramDay[] = [
         fbLabel: 'SPRAWDŹ VJ BATTLE',
         events: [
           { time: '20:30', title: 'Otwarcie drzwi', type: 'info' },
-          { time: '21:00', duration: '1h 45 min', title: 'VJ Battle — Start', type: 'battle' },
-          { time: '22:45', duration: '15 min', title: 'Wyniki VJ Battle', type: 'battle' },
-          { time: '23:00', duration: '3h', title: 'After Party', type: 'party' },
+          { time: '21:00', duration: '3h', title: 'VJ Battle', type: 'battle' },
+          { time: '00:00', duration: '2h', title: 'After Party', type: 'party' },
           { time: '02:00', title: 'Koniec', type: 'info' },
         ],
       },
