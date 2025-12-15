@@ -1,5 +1,6 @@
 import type { QueryClient } from "@tanstack/react-query"
 import { HeadContent, Outlet, Scripts, createRootRouteWithContext, useLocation } from "@tanstack/react-router"
+import { Analytics } from "@vercel/analytics/react"
 import { useEffect } from "react"
 import type * as React from "react"
 import { Toaster } from "sonner"
@@ -115,6 +116,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
                     <div className="flex min-h-svh flex-col">{children}</div>
                     <Toaster />
                 </ThemeProvider>
+                <Analytics />
                 <Scripts />
             </body>
         </html>
